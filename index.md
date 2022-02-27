@@ -4,4 +4,4 @@
 
 2) [Generating Dummy Variables/Simulated Data Sets](https://pjakiela.github.io/stata/variablesMod.html)
 
-3) [Local and Global Macros](https://pjakiela.github.io/stata/macrosMod.html)
+3) [Local and Global Macros](https://pjakiela.github.io/stata/macroMod.html)
