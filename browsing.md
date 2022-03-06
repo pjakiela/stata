@@ -5,3 +5,5 @@ This module covers how to browse data, and includes common ways of tweaking a da
 [supporting .do file download link](https://pjakiela.github.io/stata/browsing.do)
 
 [supporting data file download link](https://pjakiela.github.io/stata/mpd2020.dta)
+
+This video and the above data download link contain publically-available data from "The Maddison Project", obtained from the following link: https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020 .
