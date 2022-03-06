@@ -7,3 +7,5 @@ This video builds off the prior module on importing local .dta data files to inc
 [supporting .csv data file download](https://pjakiela.github.io/stata/nzEmploymentData.csv)
 
 [supporting .xls data file download](https://pjakiela.github.io/stata/airline.xls)
+
+This video and the above data file contain publically-available .csv data from "Stats NZ" -- the New Zealand government statistics agency, pertaining to state employment, accessed from the following link https://www.stats.govt.nz/large-datasets/csv-files-for-download/ .
