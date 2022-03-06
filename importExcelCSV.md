@@ -1,0 +1,9 @@
+## [Importing Data from .xls and .csv file formats](https://pjakiela.github.io/stata/importExcelCSV.mp4)
+
+This video builds off the prior module on importing local .dta data files to include local .csv and .xls files. 
+
+[supporting .do file download](https://pjakiela.github.io/stata/importExcelCSV.do)
+
+[supporting .csv data file download](https://pjakiela.github.io/stata/nzEmploymentData.csv)
+
+[supporting .xls data file download](https://pjakiela.github.io/stata/airline.xls)
