@@ -6,3 +6,5 @@ This above linked tutorial video covers the "Right-Click + Option" macOS shortcu
 
 [data used in this video download](https://pjakiela.github.io/stata/mpd2020.dta)
 
+This video and the above data download link contain publically-available data from "The Maddison Project", obtained from the following link: https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020 .
+
