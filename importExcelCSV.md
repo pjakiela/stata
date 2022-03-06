@@ -9,3 +9,5 @@ This video builds off the prior module on importing local .dta data files to inc
 [supporting .xls data file download](https://pjakiela.github.io/stata/airline.xls)
 
 This video and the above data file contain publically-available .csv data from "Stats NZ" -- the New Zealand government statistics agency, pertaining to state employment, accessed from the following link https://www.stats.govt.nz/large-datasets/csv-files-for-download/ .
+
+This video and the above data file contain publically-available .xls data from the "Principles of Econometrics" series by R. Carter Hill, William E. Griffiths, and Guay C. Lim. The data was accessed from the following link http://www.principlesofeconometrics.com/excel.htm .
