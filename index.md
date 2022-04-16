@@ -16,4 +16,4 @@
 
 8) [Log Files](https://pjakiela.github.io/stata/logfile.html)
 
-9) [Analyzing Data Structures](pjakiela.github.io/stata/analyzingdatastructures.html)
+9) [Analyzing Data Structures](https://pjakiela.github.io/stata/analyzingdatastructures.html)
