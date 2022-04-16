@@ -1,5 +1,7 @@
 ## Stata Tutorial Files -- Work in Progress
 
+0) [Welcome to Stata!](https://pjakiela.github.io/stata/mod0.html)
+
 1) [Importing locally-saved and Github data into Stata (macOS)](https://pjakiela.github.io/stata/mod1.html)
 
 2) [Importing .csv and .xls data into Stata](https://pjakiela.github.io/stata/importExcelCSV.html)
