@@ -1,4 +1,4 @@
-## [Different Ways to Analyze Data and Data Structures Video](https://pjakiela.github.io/stata/analyzingdatastructuresvid.mp4)
+## [Different Ways to Analyze Data and Data Structures Video](https://pjakiela.github.io/stata/analyzingdatastructuresvid.mp4.zip)
 
 This video concerns different ways in which data and data structures may be analyzed in Stata.
 
