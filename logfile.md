@@ -2,4 +2,4 @@
 
 This module concerns the creation of a log file, and what use cases it may have.
 
-[supporting .do file download:](https://pjakiela.github.io/stata/log file.do)
+[supporting .do file download:](https://pjakiela.github.io/stata/logfile.do)
