@@ -12,7 +12,7 @@
 
 6) [What to Put at the Top of a .do File](https://pjakiela.github.io/stata/topofdofile.html)
 
-7) [Abbreviations in Stata](https://pjakiela.github.io/stata/abbreviation.html)
+7) [Abbreviations in Stata](https://pjakiela.github.io/stata/abbreviating.html)
 
 8) [Log Files](https://pjakiela.github.io/stata/logfile.html)
 
