@@ -2,4 +2,4 @@
 
 This video concerns different ways in which data and data structures may be analyzed in Stata.
 
-[supporting .do file download link:](https://pjakiela.github.io/stata/analyzing data structures.do)
+[supporting .do file download link:](https://pjakiela.github.io/stata/analyzingdatastructures.do)
