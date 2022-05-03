@@ -21,3 +21,7 @@
 9) [Analyzing Data Structures](https://pjakiela.github.io/stata/analyzingdatastructures.html)
 
 10) [Help Command](https://pjakiela.github.io/stata/helpcommand.html)
+
+11) [Mathematical and Statistical Functions](https://pjakiela.github.io/stata/calculations.html)
+
+12) [Dropping or Keeping Observations](https://pjakiela.github.io/stata/droppingkeeping.html)
