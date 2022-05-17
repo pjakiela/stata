@@ -25,3 +25,9 @@
 11) [Mathematical and Statistical Functions](https://pjakiela.github.io/stata/calculations.html)
 
 12) [Dropping or Keeping Observations](https://pjakiela.github.io/stata/droppingkeeping.html)
+
+13) [Recursion and For Loops](https://pjakiela.github.io/stata/loops.html)
+
+14) [Intro to Graphing](https://pjakiela.github.io/stata/graphing.html)
+
+15) [Merging Data](https://pjakiela.github.io/stata/mergingdata.html)
