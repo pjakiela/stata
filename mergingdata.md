@@ -1,4 +1,4 @@
-## [Merging Data](https://pjakiela.github.io/stata/mergingdata.mp4)
+## [Merging Data -- video uploaded as .zip file due to size](https://pjakiela.github.io/stata/mergingdata.mp4.zip)
 
 This module contains information on merging data sets.
 
