@@ -4,7 +4,7 @@
 
 1) [Importing locally-saved and Github data into Stata (macOS)](https://pjakiela.github.io/stata/mod1.html)
 
-      Stata Commands used in this Module: 'cd', 'use', 'webuse'
+Stata Commands used in this Module: `cd`, `use`, `webuse`
 
 2) [Importing .csv and .xls data into Stata](https://pjakiela.github.io/stata/importExcelCSV.html)
 
