@@ -59,3 +59,7 @@
 15) [Merging Data](https://pjakiela.github.io/stata/mergingdata.html)
 
     Stata Commands used in this Module: 'merge 1:1', 'merge m:1'
+    
+    
+    
+Collaborators: Tristan Wille, Pamela Jakiela, Owen Ozier
