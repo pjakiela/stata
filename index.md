@@ -1,4 +1,4 @@
-## Stata Tutorial Files -- Work in Progress
+## Stata Tutorial Files
 
 0) [Welcome to Stata!](https://pjakiela.github.io/stata/mod0.html)
 
