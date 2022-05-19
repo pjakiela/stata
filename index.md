@@ -59,6 +59,10 @@ Stata syntax used in this Module: `twoway`, `scatter`, `line`, `histogram`
 15) [Merging Data](https://pjakiela.github.io/stata/mergingdata.html)
 
 Stata syntax used in this Module: `merge 1:1`, `merge m:1`
+
+16) [Accessing Stored Values](https://pjakiela.github.io/stata/storedvals.html)
+
+Stata syntax used in this Module: `return list`, `ereturn list`, `r(N)`, `r(mean)`, `r(sd)`, `r(max)`, `r(min)`, `_b[var]`, `_se[var]`, `e(r2)`, `e(cmdline)`
     
     
     
