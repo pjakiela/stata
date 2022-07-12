@@ -48,7 +48,7 @@ Stata syntax used in this Module: `floor`, `ceiling`, `round`, `log`, `exp`, `sq
 
 Stata syntax used in this Module: `drop`, `keep`, `preserve`, `restore`
 
-13) [Recursion and For Loops](https://pjakiela.github.io/stata/loops.html)
+13) [Iteration: "For" Loops](https://pjakiela.github.io/stata/loops.html)
 
 Stata syntax used in this Module: `forvalues`, `foreach`
 
