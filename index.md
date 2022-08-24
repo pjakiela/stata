@@ -2,7 +2,7 @@
 
 0) [Welcome to Stata!](https://pjakiela.github.io/stata/mod0.html)
 
-1) [Opening locally-saved and Github data in Stata (macOS)](https://pjakiela.github.io/stata/mod1.html)
+1) [Opening locally-saved and Github data in Stata (macOS)](https://pjakiela.github.io/stata/openingData.html)
 
 Stata syntax used in this Module: `cd`, `use`, `webuse`
 
