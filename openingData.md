@@ -1,4 +1,4 @@
-## [Module 1 -- Opening Data in Stata](https://pjakiela.github.io/stata/importLocalCloud.mp4)
+## [Opening Data in Stata](https://pjakiela.github.io/stata/importLocalCloud.mp4)
 
 This above linked tutorial video covers the "Right-Click + Option" macOS shortcut to copy a file path, and how to open that data in Stata. It also covers opening preloaded Stata "dummy" data, and importing data from Github.
 
