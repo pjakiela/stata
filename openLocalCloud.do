@@ -11,7 +11,7 @@ use mpd2020.dta //chooses the actual data file from the directory
 //This data set is publically available data on historical world population, GDP, GDP per capita collected by Professor Angus Maddison
 // download link: https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020 
 
-//Although it's generally considered best practice to set a working directory, you can also simply make use of the "use" command to import your data -- particularly helpful if you want to use data that isn't saved in your working directory 
+//Although it's generally considered best practice to set a working directory, you can also simply make use of the "use" command to open your data -- particularly helpful if you want to use data that isn't saved in your working directory 
 clear all
 use "/Users/tristanwille/Desktop/Stata Modules/Data/mpd2020.dta"
 
