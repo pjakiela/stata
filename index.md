@@ -20,7 +20,7 @@ Stata syntax used in this Module: `generate`, `replace`, `set obs`, `missing()`,
 
 5) [Local and Global Macros](https://pjakiela.github.io/stata/macroMod.html)
 
-Stata syntax used in this Module: `local`, `global`
+Stata syntax used in this Module: `local`, `global`, `display`
 
 6) [What to Put at the Top of a .do File](https://pjakiela.github.io/stata/topofdofile.html)
 
