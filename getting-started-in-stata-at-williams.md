@@ -15,3 +15,14 @@ that you may want to explore as you get started are `describe`, `summarize`, `ta
 `codebook`.  These will help you familiarize yourself with any Stata data set.
 
 ## Downloading Data
+
+Here is a simple do file that will download a data set from the web:
+```
+clear all
+webuse set https://pjakiela.github.io/ECON523/exercises
+webuse E1-CohenEtAl-data.dta
+```
+The data come from [Jessica Cohen, Pascaline Dupas, and Simone Schaner's 2015 paper 
+on take-up of malaria treatment medication in rural Kenya](https://www.aeaweb.org/articles?id=10.1257/aer.20130267).  It 
+is a great paper, but their replication files also make a nice and nicely-cleaned data set to use 
+when familiariazing yourself with Stata's functionality.
