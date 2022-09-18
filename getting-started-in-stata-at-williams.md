@@ -26,5 +26,18 @@ webuse E1-CohenEtAl-data.dta
 ```
 The data come from [Jessica Cohen, Pascaline Dupas, and Simone Schaner's 2015 paper 
 on take-up of malaria treatment medication in rural Kenya](https://www.aeaweb.org/articles?id=10.1257/aer.20130267).  It 
-is a great paper, but their replication files also make a nice and nicely-cleaned data set to use 
-when familiariazing yourself with Stata's functionality.
+is a great paper, but in this case we are primarily interested in having a compact, clean data set 
+to use as we explore Stata's functionality.
+
+Once you've downloaded the data set, see if you can do the following tasks:
+
+- `count` the number of observations in the data set
+- `describe` the variables in the data set
+- `tabulate` the values of a particular variable
+- use `summarize` to find the mean and standard deviation of a variable
+- use `summarize` to find the median of a variable
+- determine how many observations are missing information on a particular variable
+- `rename` a variable
+- change the label associated with a variable
+- `generate` a new variable
+- `replace` some values of a variable with alternative values
