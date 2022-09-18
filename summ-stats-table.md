@@ -68,3 +68,38 @@ three columns from **Max**, **Min**, and **N** to **Maximum**, **Minimum**, and 
 ```
 matrix colnames mystats = Mean SD Minimum Maximum Observations
 ```
+If you want to use a column or row label that contains multiple words, you can put it in quotes:
+```
+matrix colnames mystats = Mean "Standard Deviation" Minimum Maximum Observations
+```
+Try replacing the row names with short, appropriate, self-contained labels for each variable.
+
+<br>
+
+## Exporting a Table to Excel
+
+Now that you have your results stored in a Stata matrix, you can export it to Excel 
+using the `putexcel` command (in fact, `putexcel` is a useful command for exporting matrices 
+or individual statistics - read the help file!).
+
+We start with a `putexcel set` step, which tells Stata the name of the Excel file where we want 
+to write our results.  So, for example, to create an Excel file called `mysummstats.xlsx`, we could type 
+```
+putexcel set mysummstats.xlsx, replace
+```
+This file will appear in the working directory once we write something to it (which is why 
+it is important to set your working directory carefully).  The second `putexcel` step is very 
+straightforward:  the command is `putexcel` followed by the coordinates of the cell where we want to put 
+the upper left corner of our matrix; then after the equal sign, we call our matrix.  So, we could type:
+```
+putexcel A2 = matrix(mystats), names 
+```
+The `names` option tell Excel to use the row and column names that we so painstakingly added 
+to the `mystats` matrix.  
+
+Try this.  If you run your do file from the top, you should see an Excel file that looks something like this:
+
+![Excel table 1](excel-summstats.png)
+
+putexcel A2 = matrix(mystats), names 
+
