@@ -98,8 +98,10 @@ The `names` option tell Excel to use the row and column names that we so painsta
 to the `mystats` matrix.  
 
 Try this.  If you run your do file from the top, you should see an Excel file that looks something like this:
+![Excel table 1](excel-summstats.png)  
+Not bad, but still not exactly what we're looking for.  How can we imrpove the table?
 
-![Excel table 1](excel-summstats.png)
 
-putexcel A2 = matrix(mystats), names 
+
+
 
