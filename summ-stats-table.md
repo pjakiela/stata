@@ -61,3 +61,6 @@ We can fix this in two steps.  First, we need to transpose our `mystats` matrix 
 matrix mystats = matrix(mystats)'
 ```
 to our do file.  Use the `mat list` command again to see that our matrix is now set up correctly.  
+
+We can also use the commands `matrix rownames` and `matrix colnames` to change the names associated 
+with the rows and columns of our matrix.  
