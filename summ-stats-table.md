@@ -16,6 +16,8 @@ sum b_*
 ``` 
 Stata will report summary statistics about the baseline variables.  Which summary statistics are reported?
 
+## Stata's `tabstat` Command
+
 One of the sumplest ways to export a similar table to Word or Excel is to use the `tabstat` command.  Try 
 typing the command 
 ```
