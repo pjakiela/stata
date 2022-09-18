@@ -48,7 +48,16 @@ we need to save them in a new matrix with a name of our choosing.  We can do thi
 ```
 mat mystats = r(StatTotal)
 ```
-To see what is contained in the matrix `mystats`, type:
+where `mat` is short for matrix.  To see what is contained in the matrix `mystats`, type:
 ```
 mat list mystats
 ```
+Unfortunately, this matrix doesn't look exactly the way we want our summary statistics table to look:  even 
+though we used the `col(stat)` option with `tabstat`, the different variables are columns rather than rows 
+in our matrix; and the variable names are not self-explanatory.  
+
+We can fix this in two steps.  First, we need to transpose our `mystats` matrix by adding the command 
+```
+matrix mystats = matrix(mystats)'
+```
+to our do file.  Use the `mat list` command again to see that our matrix is now set up correctly.  
