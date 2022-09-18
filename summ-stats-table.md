@@ -63,4 +63,8 @@ matrix mystats = matrix(mystats)'
 to our do file.  Use the `mat list` command again to see that our matrix is now set up correctly.  
 
 We can also use the commands `matrix rownames` and `matrix colnames` to change the names associated 
-with the rows and columns of our matrix.  
+with the rows and columns of our matrix.  For example, we could change the headings of the last 
+three columns from **Max**, **Min**, and **N** to **Maximum**, **Minimum**, and **Observations** using the command
+```
+matrix colnames mystats = Mean SD Minimum Maximum Observations
+```
