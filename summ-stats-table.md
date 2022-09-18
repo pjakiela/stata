@@ -14,7 +14,9 @@ If you type the command
 ```
 sum b_*
 ``` 
-Stata will report summary statistics about the baseline variables.  Which summary statistics are reported?
+Stata will report summary statistics about the baseline variables.  Which summary statistics are reported?  
+
+<br>
 
 ## Stata's `tabstat` Command
 
@@ -35,3 +37,18 @@ something that we would like to include in one of our papers!  Because the varia
 truncated, we can't even tell which variables are included.  However, if you try adding 
 `col(stat) save` at the end of your `tabstat` command, your output should look better - and your results 
 will be temporarily saved in Stata's local memory as the matrix `r(StatTotal)`.
+
+<br>
+
+## Saving `tabstat` Results as a Matrix
+
+When you use `tabstat` with the `save` option, Stata automatically stores your summary statistics 
+in a local matrix called `r(StatTotal)`.  To keep those results from disappearing when you run another command, 
+we need to save them in a new matrix with a name of our choosing.  We can do this by using the commands
+```
+mat mystats = r(StatTotal)
+```
+To see what is contained in the matrix `mystats`, type:
+```
+mat list mystats
+```
