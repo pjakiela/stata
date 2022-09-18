@@ -6,7 +6,9 @@ clear all
 set more off
 ```
 and then includes a `cd` command to change Stata's working directory to the folder 
-on your computer where you want to save the tables you're about to make.  
+on your computer where you want to save the tables you're about to make.  It is a good idea 
+to also include a comment (a line that begins with `//` or `*`) where you describe the purpose of your 
+do file.
 
 If you are unsure of the file path to your prefered folder or directory, choose 
 **Change Working Directory** from Stata's file menu and then select your preferred 
@@ -24,6 +26,15 @@ by Jessica Cohen, Pascaline Dupas, and Simone Schaner, published in the _America
 examine behavioral responses to various discounts (“subsidies”) for malaria treatment, called “artemisinin combination therapy” 
 or “ACT.” An overview of the randomized evalaution is available 
 [here](https://www.povertyactionlab.org/sites/default/files/publication/2011.12.15-Subsidizing-Malaria.pdf).
+
+You can either download the [data set](https://pjakiela.github.io/ECON523/exercises/E1-CohenEtAl-data.dta) and 
+save it to your working director (or another folder if you prefer).  If you do this, you can load your data into 
+Stata using the `use` command.  Alternatively, you can use the code
+```
+webuse set https://pjakiela.github.io/ECON523/exercises
+webuse E1-CohenEtAl-data.dta
+```
+to load your data directly from the web.
 
 <br>
 
