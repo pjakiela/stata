@@ -99,7 +99,11 @@ to the `mystats` matrix.
 
 Try this.  If you run your do file from the top, you should see an Excel file that looks something like this:
 ![Excel table 1](excel-summstats.png)  
-Not bad, but still not exactly what we're looking for.  How can we imrpove the table?
+Not bad, but still not exactly what we're looking for.  How can we improve the table?
+
+One way to truncate numbers is to use the 
+
+
 
 
 
