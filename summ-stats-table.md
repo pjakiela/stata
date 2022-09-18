@@ -27,4 +27,9 @@ baseline variable.  Try to use the help file to figure out how to get `tabstat` 
 statistics in one table.
 
 Once you succeed, your Stata output will probably look something like this:
-
+![tabstat output](tabstat1.png)
+This **is** a table reporting the summary statistics that we are interested in, but it is not 
+something that we would like to include in one of our papers!  Because the variable names are 
+truncated, we can't even tell which variables are included.  However, if you try adding 
+`col(stat) save` at the end of your `tabstat` command, your output should look better - and your results 
+will be temporarily saved in Stata's local memory as the matrix `r(StatTotal)`.
