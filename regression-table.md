@@ -24,3 +24,4 @@ To see which regression results are currently stored in memory, type `eststo dir
 type `eststo clear`.  
 
 ## Exporting Regression Results
+ 
