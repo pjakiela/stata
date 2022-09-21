@@ -135,7 +135,7 @@ cellmargin(all, 0.1 cm)
 putdocx save mysummstats, replace
 ```
 
-## A Do File
+## A do File
 
 An example do file that executes all of these commands is available [here](summ-stats-example.do).
 
