@@ -4,7 +4,7 @@ The stata commands `eststo` and `esttab` allow you to make attractive,
 self-contained tables with very little effort.  Before you begin, set up a do file that 
 downloads your data by following the instructions [here](https://pjakiela.github.io/stata/making-tables.html).
 
-## Storing Regressiong Results with `eststo`
+## Storing Regression Results with `eststo`
 
 `eststo` is a Stata command that allows you to save the results of a regression.  Immediately after you run 
 any regression, your results are saved in a collection of local macros and matrices (you can see what is saved 
