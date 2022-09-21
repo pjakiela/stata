@@ -31,3 +31,5 @@ eststo clear
 eststo:  reg c_act coartemprice
 eststo:  reg c_act coartemprice b_*
 ```
+
+
