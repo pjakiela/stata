@@ -1,5 +1,7 @@
 # Getting Started in Stata
 
+<br>
+
 Williams students can download Stata from [Williams OIT](https://oit.williams.edu/software/).  Search 
 for Stata on the OIT webpage, and then click on the Stata SE option.  From there, scroll down 
 to select the Mac or Windows option as appropriate.  When you click on the Mac or Windows link, 
@@ -8,6 +10,8 @@ on your computer and then go to the place where you've saved it and double click
 to begin installing Stata on your computer.  After you install Stata, you'll need to enter the serial number, 
 code, and authorization listed in the google doc the first time you open Stata.  
 
+<br>
+
 ## Tutorial Videos
 
 Once you've installed Stata, Williams ECON's [Stata Tutorial Videos](https://pjakiela.github.io/stata/) 
@@ -15,6 +19,8 @@ can provide a good introduction to Stata.  You can also use Stata's help files b
 `help` followed by the name of any Stata command into the Stata command window.  Key commands 
 that you may want to explore as you get started are `describe`, `summarize`, `tabulate`, and 
 `codebook`.  These will help you familiarize yourself with any Stata data set.
+
+<br>
 
 ## Downloading Data
 
@@ -41,3 +47,14 @@ Once you've downloaded the data set, see if you can do the following tasks:
 - change the label associated with a variable
 - `generate` a new variable
 - `replace` some values of a variable with alternative values
+
+<br>
+
+## Additional Resources
+
+- [Stata Tutorial Videos](https://pjakiela.github.io/stata/) 
+- [A Summary Statistics Table](https://pjakiela.github.io/stata/summ-stats-table.html)  
+- [A Balance Table]()  
+- [A Regression Table]()  
+- [A Fully Customizable Regression Table]()
+- [Data Visualization Tips]()
