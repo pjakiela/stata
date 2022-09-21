@@ -1,5 +1,8 @@
 # Making Tables in Stata
 
+Before getting started, you may want to watch the [tutorial video on local macros](https://pjakiela.github.io/stata/macroMod.html).  To export 
+tables from Stata to Excel, Word, or LaTeX, we'll be using local macros and matrices.
+
 To get started, create a do file that begins with 
 ```
 clear all
@@ -39,5 +42,7 @@ to load your data directly from the web.
 Once you have a do file that loads your data, take a minute to familiarize yourself 
 with the data set.  How many observations does it contain?  How many variables?  
 
-<br>
+From here, we can proceed to make any of the following tables:
+
+- [A summary statistics table]()
 
