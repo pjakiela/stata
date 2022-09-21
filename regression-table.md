@@ -25,3 +25,9 @@ type `eststo clear`.
 
 ## Exporting Regression Results
  
+Suppose you run the following regressions and you want to export your results as a regression table:
+```
+eststo clear
+eststo:  reg c_act coartemprice
+eststo:  reg c_act coartemprice b_*
+```
