@@ -126,7 +126,8 @@ table to word, we could use the code
 ```
 putdocx clear
 putdocx begin
-putdocx table tbl1 = matrix(roundstats), rownames colnames ///
+putdocx table tbl1 = matrix(roundstats), ///
+rownames colnames ///
 border(top, double) border(bottom, double) ///
 border(insideH, nil) border(insideV, nil) ///
 border(start, nil) border(end, nil) ///
