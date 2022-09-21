@@ -53,8 +53,5 @@ Once you've downloaded the data set, see if you can do the following tasks:
 ## Additional Resources
 
 - [Stata Tutorial Videos](https://pjakiela.github.io/stata/) 
-- [A Summary Statistics Table](https://pjakiela.github.io/stata/summ-stats-table.html)  
-- [A Balance Table]()  
-- [A Regression Table]()  
-- [A Fully Customizable Regression Table]()
-- [Data Visualization Tips]()
+- [Making Tables](https://pjakiela.github.io/stata/making-tables.html)  
+- [Data Visualization Tips](https://pjakiela.github.io/stata/dataviz.html)
