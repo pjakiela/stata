@@ -31,5 +31,10 @@ eststo clear
 eststo:  reg c_act coartemprice
 eststo:  reg c_act coartemprice b_*
 ```
+Simply typing `esttab` after storing the results of these regressions will produce a decent-looking regression table 
+in Stata's output window:
+
+![esttab results](esttab1.png)
+
 
 
