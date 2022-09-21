@@ -119,8 +119,20 @@ formatting.  it is worth exploring the help file to see what else you can do.
 
 ## Exporting a Table to Word
 
-
-
+If you prefer to export your table to Microsoft Word, you can do that using the `putdocx` command - but be aware 
+that it is much less flexible than `putexcel`.  The operation of writing your table to a word document all occurs in one step,
+so you can't modify table formatting or add a title or notes after the fact.  If we wanted to export our summary statistics 
+table to word, we could use the code
+```
+putdocx clear
+putdocx begin
+putdocx table tbl1 = matrix(roundstats), rownames colnames ///
+border(top, double) border(bottom, double) ///
+border(insideH, nil) border(insideV, nil) ///
+border(start, nil) border(end, nil) ///
+cellmargin(all, 0.1 cm) 
+putdocx save mysummstats, replace
+```
 
 
 
