@@ -101,8 +101,23 @@ Try this.  If you run your do file from the top, you should see an Excel file th
 ![Excel table 1](excel-summstats.png)  
 Not bad, but still not exactly what we're looking for.  How can we improve the table?
 
-One way to truncate numbers is to use the 
+One way to truncate numbers is to use the `matmap` function in Stata.  `matmap` allows you to apply a Stata function, 
+in this case the `round` function, to every cell of a Stata matrix.  The command
+```
+matmap mystats roundstats, map(round(@,0.01))
+```
+generates a new Stata matrix, `roundstats` which rounds numbers to the nearest 0.01.  We can then export this matrix 
+to Excel (over-writing `mystats`) using the `putexcel` command.
 
+One nice thing about `putexcel` is that we can modify the formatting after we've exported out main results matrix.  So, 
+to add a border to the bottom of the table, we could use the command
+```
+putexcel A9:F9, border(bottom)
+```
+You can use similar code to add a border to the top, add a title across the row of cells above the table, or apply other 
+formatting.  it is worth exploring the help file to see what else you can do.
+
+## Exporting a Table to Word
 
 
 
