@@ -54,4 +54,4 @@ Having relabeled the data, I can use `esttab` to generate a new version of my re
 around with `esttab`'s `varwidth()` and `modelwidth()` options, I can make sure that my columns are wide enough 
 to contain my variable labels.  This gives me a fairly professional looking table:
 
-![moah esttab results](esttab2.png)
+![moah esttab results](esttab2.png) 
