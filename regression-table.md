@@ -50,3 +50,8 @@ We can clean the table up considerably by labeling our variables using the `labe
 should be short, so that they do not wrap over multiple lines in your table.  They should also be self-expanatory, 
 though you can include additional information in the table notes when necessary.  
 
+Having relabeled the data, I can use `esttab` to generate a new version of my regression table.  By playing 
+around with `esttab`'s `varwidth()` and `modelwidth()` options, I can make sure that my columns are wide enough 
+to contain my variable labels.  This gives me a fairly professional looking table:
+
+![moah esttab results](esttab2.png)
