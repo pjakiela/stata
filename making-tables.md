@@ -44,8 +44,6 @@ with the data set.  How many observations does it contain?  How many variables?
 
 From here, we can proceed to make any of the following tables:
 
-- [A Summary Statistics Table](https://pjakiela.github.io/stata/summ-stats-table.html)  
-- [A Balance Table](https://pjakiela.github.io/stata/balance-table.html)  
-- [A Regression Table](https://pjakiela.github.io/stata/regression-table.html)   
-- [A Fully Customizable Regression Table](https://pjakiela.github.io/stata/custom-table.html)  
+- [A Summary Statistics Table](https://pjakiela.github.io/stata/summ-stats-table.html)   
+- [A Regression Table](https://pjakiela.github.io/stata/regression-table.html)    
 
