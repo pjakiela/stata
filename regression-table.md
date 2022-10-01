@@ -27,7 +27,7 @@ type `eststo clear`.  It is worth taking a look at the help file for `eststo` to
 
 <br>
 
-## Exporting Regression Results
+## Exporting Regression Results to Word
  
 Suppose you run the following regressions and you want to export your results as a regression table:
 ```
@@ -50,8 +50,49 @@ We can clean the table up considerably by labeling our variables using the `labe
 should be short, so that they do not wrap over multiple lines in your table.  They should also be self-expanatory, 
 though you can include additional information in the table notes when necessary.  
 
-Having relabeled the data, I can use `esttab` to generate a new version of my regression table.  By playing 
-around with `esttab`'s `varwidth()` and `modelwidth()` options, I can make sure that my columns are wide enough 
-to contain my variable labels.  This gives me a fairly professional looking table:
+Having relabeled the data, you can use `esttab` to generate a new version of your regression table.  By playing 
+around with `esttab`'s `varwidth()` and `modelwidth()` options, you can make sure that your columns are wide enough 
+to contain your variable labels.  This gives you a fairly professional looking table:
 
 ![moah esttab results](esttab2.png) 
+
+Of course, before publishing this table, you'd want to find out why your two regression specifications include 
+different numbers of observations!  You might also try replacing the t-statistics with standard errors using 
+`esttab`'s `se` option, or keeping only the coefficients on price using the `keep` option.  Be sure to use the 
+`addnotes()` option to add any relevant information in the table notes.
+
+<br>
+
+## Exporting Regression Results to LaTeX or Excel
+
+The `esttab` command can also be used to export regression results to 
+Excel or LaTeX.  To export to Excel, just name your new file as a csv file rather 
+than an rtf file:
+```
+esttab using myregtable.csv, replace
+```
+A nice thing about exporting to Excel is that you can make additional modifications 
+(for example, to format borders) using the `putexcel` command.
+
+`esttab` can also export your table to LaTeX - all you need to do 
+is give your new file a name that ends in tex.  For example, 
+if you export your regression results using the code 
+```
+esttab using reg-table.tex, label b(2) se(2) nostar replace ///
+   title(Regression table\label{tab1})
+ ```
+you can compile a pdf of the table in overleaf or any other LaTeX compiler 
+with the LaTeX code:
+```
+\documentclass[12pt]{article}
+\begin{document}
+\input{reg-table.tex}
+\end{document}
+```
+
+<br>
+
+## A do File
+
+A do file containing the code used in these examples is available 
+[here](reg-table-example.do).
