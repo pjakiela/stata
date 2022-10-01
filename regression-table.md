@@ -78,7 +78,7 @@ A nice thing about exporting to Excel is that you can make additional modificati
 is give your new file a name that ends in tex.  For example, 
 if you export your regression results using the code 
 ```
-esttab using reg-table.tex, label b(2) se(2) nostar replace ///
+esttab using myregtable.tex, label b(2) se(2) nostar replace ///
    title(Regression table\label{tab1})
  ```
 you can compile a pdf of the table in overleaf or any other LaTeX compiler 
@@ -86,7 +86,7 @@ with the LaTeX code:
 ```
 \documentclass[12pt]{article}
 \begin{document}
-\input{reg-table.tex}
+\input{myregtable.tex}
 \end{document}
 ```
 
