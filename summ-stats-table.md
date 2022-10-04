@@ -1,5 +1,8 @@
 # A Summary Statistics Table
 
+Before you begin, set up a do file that 
+downloads your data by following the instructions [here](https://pjakiela.github.io/stata/making-tables.html).  
+
 The data set contains 7 baseline variables, each of which begins with the prefix `b_`.  Use the 
 command
 ```
@@ -97,9 +100,11 @@ putexcel A2 = matrix(mystats), names
 The `names` option tell Excel to use the row and column names that we so painstakingly added 
 to the `mystats` matrix.  
 
-Try this.  If you run your do file from the top, you should see an Excel file that looks something like this:
+Try this.  If you run your do file from the top, you should see an Excel file that looks something like this:  
+
 ![Excel table 1](excel-summstats.png)  
-Not bad, but still not exactly what we're looking for.  How can we improve the table?
+
+Not bad, but still not exactly what we're looking for.  How can we improve the table?  
 
 One way to truncate numbers is to use the `matmap` function in Stata.  `matmap` allows you to apply a Stata function, 
 in this case the `round` function, to every cell of a Stata matrix.  The command
@@ -116,6 +121,8 @@ putexcel A9:F9, border(bottom)
 ```
 You can use similar code to add a border to the top, add a title across the row of cells above the table, or apply other 
 formatting.  it is worth exploring the help file to see what else you can do.
+
+<br>
 
 ## Exporting a Table to Word
 
@@ -134,6 +141,12 @@ border(start, nil) border(end, nil) ///
 cellmargin(all, 0.1 cm) 
 putdocx save mysummstats, replace
 ```
+
+An alternative approach is to use the `estpost` command after `tabstat`, following 
+the instructions provided in [The Stata to LaTeX Guide](https://medium.com/the-stata-guide/the-stata-to-latex-guide-6e7ed5622856), 
+which is useful even if you don't intend to export your results to LaTeX.
+
+<br>
 
 ## A do File
 
