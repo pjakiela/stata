@@ -22,6 +22,6 @@
 
 [Claus Wilke's _Fundamentals of Data Visualization_](https://clauswilke.com/dataviz/)  
 
-[Kieran Healy's _Data Visualization:  A Practical Introduction](https://socviz.co/)  
+[Kieran Healy's _Data Visualization:  A Practical Introduction_](https://socviz.co/)  
 _Very focused on R, but the intro chapter is worth reading even if you plan to work in Stata._  
 
