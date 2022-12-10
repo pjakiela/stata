@@ -34,7 +34,7 @@ mat list r(table)
 first regresses `c_act` on `coartemprice` and then uses the `matrix list` (`mat list` for short) command to have Stata display 
 the regression results.  We'll see the following output:
 
-!(mat-list-rtable.png)
+![mat-list-rtable.png](mat list rtable results)
 
 All of these e-class results are over-written as soon as you run another regression - so we need to save them somewhere if we want 
 to be able to access them later.
