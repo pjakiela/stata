@@ -11,7 +11,7 @@ downloads data from the paper
 
 Immediately after you run a regression in Stata, your results are saved in 
 a collection of local macros and matrices.  You can see what is saved 
-by typing `return list` and `ereturn list` immediately after running a regreession.  So, 
+by typing `return list` and `ereturn list` immediately after running a regression.  So, 
 for example, if we run the regression 
 ```reg c_act coartemprice b_*```
 to regress the dummy for treating malaria with ACT (`c_act`) on the randomly assigned price (`coartemprice`) and 
@@ -24,8 +24,17 @@ immediately after running your regression, Stata will provide a list of what it 
 and matrices containing the results of the regression.  For example, the local `e(N)` is the number of observations 
 (from the last regression Stata ran), and the matrix `e(b)` is a vector of estimated regression coefficients.  
 
-A particularly matrix is `r(table)`, which is where Stata stores all of the statistics related to regression coefficients (the 
-coefficient estimates themselves as well as standard errors, t-statistics, p-values, and confidence intervals).
+A particularly useful matrix is `r(table)`, which is where Stata stores all of the statistics related to regression coefficients (the 
+coefficient estimates themselves as well as standard errors, t-statistics, p-values, and confidence intervals).  For example, 
+the code 
+```
+reg c_act coartemprice
+mat list r(table)
+```
+first regresses `c_act` on `coartemprice` and then uses the `matrix list` (`mat list` for short) command to have Stata display 
+the regression results.  We'll see the following output:
+
+!(mat-list-rtable.png)
 
 All of these e-class results are over-written as soon as you run another regression - so we need to save them somewhere if we want 
 to be able to access them later.
