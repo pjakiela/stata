@@ -9,6 +9,27 @@ downloads data from the paper
 
 ## Regression Results
 
+Immediately after you run a regression in Stata, your results are saved in 
+a collection of local macros and matrices.  You can see what is saved 
+by typing `return list` and `ereturn list` immediately after running a regreession.  So, 
+for example, if we run the regression 
+```reg c_act coartemprice b_*```
+to regress the dummy for treating malaria with ACT (`c_act`) on the randomly assigned price (`coartemprice`) and 
+all of the baseline convariates (with variables names beginning with `b_`), Stata will report the coefficients, 
+standard errors, p-values, and confidence intervals for the eight independent variables plus the constant, and it 
+will also report a range of regression diagnostics such as the number of observations, the R-squared, and the 
+root mean-squared error.  If you type 
+```ereturn list```
+immediately after running your regression, Stata will provide a list of what it calls e-class results - local macros 
+and matrices containing the results of the regression.  For example, the local `e(N)` is the number of observations 
+(from the last regression Stata ran), and the matrix `e(b)` is a vector of estimated regression coefficients.  
+
+A particularly matrix is `r(table)`, which is where Stata stores all of the statistics related to regression coefficients (the 
+coefficient estimates themselves as well as standard errors, t-statistics, p-values, and confidence intervals).
+
+All of these e-class results are over-written as soon as you run another regression - so we need to save them somewhere if we want 
+to be able to access them later.
+
 <br>
 
 ## Storing Regression Results with `eststo`
