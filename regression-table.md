@@ -11,7 +11,7 @@ downloads data from the paper
 
 `eststo` is a Stata command that allows you to save the results of a regression.  Immediately after you run 
 any regression, your results are saved in a collection of local macros and matrices (you can see what is saved 
-by typing `ereturn list` immediately after running your regreession).  These locals are 
+by typing `ereturn list` immediately after running your regression).  These locals are 
 over-written as soon as you run another regression - so we need to save them somewhere.  This is what `eststo` does.
 
 `eststo` is very easy to use.  You can simply type `eststo` after running any regression.  Alternatively, you can preceed 
@@ -52,7 +52,7 @@ which will save a rich text format file in your working directory, which you can
 ## Publication-Ready Tables
 
 We can clean our table up considerably by labeling our variables using the `label var` command to label 
-the independent variables that will appear in our table (note:  you must do this **before** you run your 
+the $X$ variables that will appear in our table (note:  you must do this **before** you run your 
 regressions).  When variable names appear in otherwise finished tables, readers often have a hard time 
 knowing what the variables are:  names like `b_dist_km` or `txpostxfem` may not be immediately 
 self-eplanatory.  And they do not look very professional.  If your variables are labeled, `esttab` will 
@@ -63,16 +63,35 @@ Labels should be short, so that they do not wrap over multiple lines in your tab
 self-expanatory. You can include additional information in the table notes when necessary.  If you have 
 categorical variables that can be replaced with easier-to-interpret dummy variables, this might be a good 
 opportunity to transform them.  So, for example, you can include a rural dummy labeled "Rural" instead of 
-a `region` variable labeled "Region of residence:  urban = 1, rural = 2".
+a `region` variable labeled "Region of residence:  urban = 1, rural = 2".  This will make it easier for 
+readers to immeidately interpret the regression coefficient.
 
 Having relabeled the data, you can use `esttab` to generate a new version of your regression table.  By playing 
 around with `esttab`'s `varwidth()` and `modelwidth()` options, you can make sure that your columns are wide enough 
-to contain your variable labels.  This gives you a fairly professional looking table:
+to contain your variable labels.  Here, I used `varwidth(28)` and `modelwidth(16)`.  It's not clear what the units are, 
+but higher numbers lead to wider columns in your table.  This gives you a fairly professional looking table:
 
 ![moah esttab results](esttab2.png) 
 
 Of course, before publishing this table, you'd want to find out why your two regression specifications include 
-different numbers of observations!  You might also try replacing the t-statistics with standard errors using 
+different numbers of observations!  Otherwise, you won't know whether any difference in the coefficient of interest 
+between Column 1 and Column 2 results from adding the controls or changing your analysis sample.  You should 
+always make sure that the columns in your regression tables contain identical numbers of observations (unless you 
+are varying the sample, for instance by looking at treatment effects on women in one column and treatment effects 
+on men in the next column).
+
+You might also notice that the coefficient estimates associated with with `coartemprice` variable are very long - the begin 
+with three zeroes.  To correct this, simply divide the `coartemprice` variable by 100 (or even 1000) before 
+running your regressions.  This will not alter any of your other coefficients, and it will rescale the coefficients on price 
+so that they fit into the table more easily.  (Of course, this changes the interpretation slightly:  the coefficient 
+would then indicate the change in your outcome variable resulting from a 100 shilling increase in the price of coartem 
+rather than a 1 shilling increase in the price of coartem.)
+
+<br>
+
+## Additional Options in `esttab`
+
+You might also try replacing the t-statistics with standard errors using 
 `esttab`'s `se` option, or keeping only the coefficients on price using the `keep` option.  Be sure to use the 
 `addnotes()` option to add any relevant information in the table notes.
 
