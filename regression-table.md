@@ -55,8 +55,8 @@ You can clean up your table by labeling your variables using the `label var` com
 do this **before** you run your regressions).  When variable names appear in otherwise finished tables, 
 readers often have a hard time knowing what the variables are:  names like `b_dist_km` 
 or `txpostxfem` may not be immediately self-eplanatory.  And they do not look very professional.  If 
-your variables are labeled, `esttab` will automatically use the labels rather than the variable names 
-when making tables (though you can override this by invoking the `nolabel` option).  
+your variables are labeled, you can invoke `esttab`'s `label` option to use labels rather than variable names 
+in your table.  
 
 Variable labels should be short, so that they do not wrap over multiple lines in your table.  They should also be 
 self-expanatory. You can include additional information in the table notes when necessary.  
@@ -66,14 +66,15 @@ opportunity to transform them.  So, for example, you can include a rural dummy l
 a `region` variable labeled "Region of residence:  urban = 1, rural = 2".  This will make it easier for 
 readers to immediately interpret your regression coefficients.
 
-Having relabeled the data, you can use `esttab` to generate a new version of your regression table.  By playing 
-around with `esttab`'s `varwidth()` and `modelwidth()` options, you can make sure that your columns are wide enough 
-to contain your variable labels.  Here, I used `varwidth(28)` and `modelwidth(16)`.  It's not clear what the units are, 
-but higher numbers lead to wider columns in your table.  This gives you a fairly professional looking table:
+Having relabeled the data, you can use `esttab` to generate a new version of your regression table.  If the text of 
+your variable labels wraps onto a second line, you can make the first column of the table wider using `esttab`'s 
+`varwidth()` option.  Here, I used `varwidth(28)`  You can also set the width of your columns of coefficient estimates 
+using the `modelwidth()` option.  I used `modelwidth(16)` in the example below.  It's not clear what the units are, 
+but higher numbers lead to wider columns.  This gives you a fairly professional looking table:
 
 ![moah esttab results](esttab2.png) 
 
-Of course, before publishing this table, you'd want to find out why your two regression specifications include 
+Before publishing this table, you'd want to find out why your two regression specifications include 
 different numbers of observations!  Otherwise, you won't know whether any difference in the coefficient of interest 
 between Column 1 and Column 2 results from adding the controls or changing your analysis sample.  You should 
 always make sure that the columns in your regression tables contain identical numbers of observations (unless you 
