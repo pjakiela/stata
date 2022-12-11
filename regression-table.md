@@ -47,9 +47,23 @@ esttab using myregtable.rtf, replace
 ```
 which will save a rich text format file in your working directory, which you can then open using word.
 
-We can clean the table up considerably by labeling our variables using the `label var` command.  Labels 
-should be short, so that they do not wrap over multiple lines in your table.  They should also be self-expanatory, 
-though you can include additional information in the table notes when necessary.  
+<br>
+
+## Publication-Ready Tables
+
+We can clean our table up considerably by labeling our variables using the `label var` command to label 
+the independent variables that will appear in our table (note:  you must do this **before** you run your 
+regressions).  When variable names appear in otherwise finished tables, readers often have a hard time 
+knowing what the variables are:  names like `b_dist_km` or `txpostxfem` may not be immediately 
+self-eplanatory.  And they do not look very professional.  If your variables are labeled, `esttab` will 
+automatically use the labels rather than the variable names when making tables (though you can override 
+this by invoking the `nolabel` option).  
+
+Labels should be short, so that they do not wrap over multiple lines in your table.  They should also be 
+self-expanatory. You can include additional information in the table notes when necessary.  If you have 
+categorical variables that can be replaced with easier-to-interpret dummy variables, this might be a good 
+opportunity to transform them.  So, for example, you can include a rural dummy labeled "Rural" instead of 
+a `region` variable labeled "Region of residence:  urban = 1, rural = 2".
 
 Having relabeled the data, you can use `esttab` to generate a new version of your regression table.  By playing 
 around with `esttab`'s `varwidth()` and `modelwidth()` options, you can make sure that your columns are wide enough 
