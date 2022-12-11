@@ -55,8 +55,7 @@ You can clean up your table by labeling your variables using the `label var` com
 do this **before** you run your regressions).  When variable names appear in otherwise finished tables, 
 readers often have a hard time knowing what the variables are:  names like `b_dist_km` 
 or `txpostxfem` may not be immediately self-eplanatory.  And they do not look very professional.  If 
-your variables are labeled, you can invoke `esttab`'s `label` option to use labels rather than variable names 
-in your table.  
+your variables are labeled, you can invoke `esttab`'s `label` option to use labels rather than variable names.  
 
 Variable labels should be short, so that they do not wrap over multiple lines in your table.  They should also be 
 self-expanatory. You can include additional information in the table notes when necessary.  
@@ -68,33 +67,38 @@ readers to immediately interpret your regression coefficients.
 
 Having relabeled the data, you can use `esttab` to generate a new version of your regression table.  If the text of 
 your variable labels wraps onto a second line, you can make the first column of the table wider using `esttab`'s 
-`varwidth()` option.  Here, I used `varwidth(28)`  You can also set the width of your columns of coefficient estimates 
-using the `modelwidth()` option.  I used `modelwidth(16)` in the example below.  It's not clear what the units are, 
+`varwidth()` option.  In the example below, I used `varwidth(28)`  You can also set the width of your columns of coefficient estimates 
+using the `modelwidth()` option.  I used `modelwidth(16)`.  It's not clear what the units are, 
 but higher numbers lead to wider columns.  This gives you a fairly professional looking table:
 
 ![moah esttab results](esttab2.png) 
 
 Before publishing this table, you'd want to find out why your two regression specifications include 
-different numbers of observations!  Otherwise, you won't know whether any difference in the coefficient of interest 
+different numbers of observations.  Otherwise, you won't know whether any difference in the coefficient of interest 
 between Column 1 and Column 2 results from adding the controls or changing your analysis sample.  You should 
 always make sure that the columns in your regression tables contain identical numbers of observations (unless you 
-are varying the sample, for instance by looking at treatment effects on women in one column and treatment effects 
-on men in the next column).
+are varying the sample intentionally, for example if you were looking at treatment effects on women in one column and treatment effects 
+on men in another column).
 
 You might also notice that the coefficient estimates associated with with `coartemprice` variable are very long - the begin 
-with three zeroes.  To correct this, simply divide the `coartemprice` variable by 100 (or even 1000) before 
-running your regressions.  This will not alter any of your other coefficients, and it will rescale the coefficients on price 
+with three zeroes after the decimal point.  To correct this, simply divide the `coartemprice` variable by 100 (or even 1000) before 
+running your regressions.  This will not alter any of your other coefficients, but it will rescale the coefficients on price 
 so that they fit into the table more easily.  (Of course, this changes the interpretation slightly:  the coefficient 
 would then indicate the change in your outcome variable resulting from a 100 shilling increase in the price of coartem 
-rather than a 1 shilling increase in the price of coartem.)
+rather than a one shilling price increase.)
 
 <br>
 
 ## Additional Options in `esttab`
 
-You might also try replacing the t-statistics with standard errors using 
-`esttab`'s `se` option, or keeping only the coefficients on price using the `keep` option.  Be sure to use the 
+Economists typically report standard errors rather than t-statistics in parentheses.  You can 
+achieve this by invoking `esttab`'s `se` option.  
+You can also use the 
 `addnotes()` option to add any relevant information in the table notes.
+
+
+
+r keeping only the coefficients on price using the `keep` option.  
 
 <br>
 
