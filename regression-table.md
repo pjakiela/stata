@@ -17,7 +17,7 @@ over-written as soon as you run another regression - so we need to save them som
 `eststo` is very easy to use.  You can simply type `eststo` after running any regression.  Alternatively, you can precede 
 each regression command with `eststo:`, as you see in this example:
 ```
-eststo:  c_act coartemprice
+eststo:  reg c_act coartemprice
 ```
 By default, `eststo` saves the results from your first regression as `est1`, the results from your second regression 
 as `est2`, est.  But you can provide alternative names if you prefer:  just type `eststo` followed by your preferred name 
@@ -92,7 +92,45 @@ rather than a one shilling price increase.)
 ## Additional Options in `esttab`
 
 Economists typically report standard errors rather than t-statistics in parentheses.  You can 
-achieve this by invoking `esttab`'s `se` option.  
+achieve this by invoking `esttab`'s `se` option.  If you want to specify how many digits 
+to report, you can do this adding a number in partheses after either `b` (for the coefficient 
+estimates) or `se` (for the standard errors).  So, if for some reason you wished to report 
+coefficient estimates to two decimal places and standard errors to three, you would use 
+the command
+```
+esttab, b(2) se(3)
+```
+
+You can change the headings of the columns reporting regression coefficients with `esttab`'s 
+`mtitles()` option. By default, columns of coefficients will be numbered, and either the name 
+of the dependent variable or its label will appear as well.  However, when the outcome variable does not 
+differ across columns, it often makes more sense to use more informative columns headings.  For example, 
+if your first specification was OLS and your second specification was probit, you might want to label 
+your columns accordingly:
+```
+esttab, mtitles(OLS Probit)
+```
+If you wish to use multi-word column headings, you can put each one in quotes.  For example:
+```
+esttab, mtitles("Rural Areas" "Urban Areas")
+```
+
+You may not always want to report the coefficients on your control variables - particularly when 
+your specification includes a large number of fixed effects.  The `esttab` option `keep()` allows 
+you to provide a list (in parentheses) of the variables that you want to appear in your table.  Alternatively, 
+you can use the option `drop()` to indicate which variables should be surpressed.  The option 
+`indicate()` drops a specific set of variables from the table (like `drop()`) but also creates an additional 
+row at the bottom of the table indicating which specifications include the dropped variables.  For example:
+```
+eststo clear
+eststo:  reg c_act coartemprice
+eststo:  reg c_act coartemprice b_*
+esttab, label drop(Baseline Controls = b_*) replace
+```
+produces the table below.
+
+![esttab-indicate-example.png](indicate-example)
+
 You can also use the 
 `addnotes()` option to add any relevant information in the table notes.
 
