@@ -7,45 +7,11 @@ downloads data from the paper
 
 <br>
 
-## Regression Results
-
-Immediately after you run a regression in Stata, your results are saved in 
-a collection of local macros and matrices.  You can see what is saved 
-by typing `return list` and `ereturn list` immediately after running a regression.  So, 
-for example, if we run the regression 
-```reg c_act coartemprice b_*```
-to regress the dummy for treating malaria with ACT (`c_act`) on the randomly assigned price (`coartemprice`) and 
-all of the baseline convariates (with variables names beginning with `b_`), Stata will report the coefficients, 
-standard errors, p-values, and confidence intervals for the eight independent variables plus the constant, and it 
-will also report a range of regression diagnostics such as the number of observations, the R-squared, and the 
-root mean-squared error.  If you type 
-```ereturn list```
-immediately after running your regression, Stata will provide a list of what it calls e-class results - local macros 
-and matrices containing the results of the regression.  For example, the local `e(N)` is the number of observations 
-(from the last regression Stata ran), and the matrix `e(b)` is a vector of estimated regression coefficients.  
-
-A particularly useful matrix is `r(table)`, which is where Stata stores all of the statistics related to regression coefficients (the 
-coefficient estimates themselves as well as standard errors, t-statistics, p-values, and confidence intervals).  For example, 
-the code 
-```
-reg c_act coartemprice
-mat list r(table)
-```
-first regresses `c_act` on `coartemprice` and then uses the `matrix list` (`mat list` for short) command to have Stata display 
-the regression results.  We'll see the following output:
-
-![mat list results](mat-list-rtable.png)
-
-All of these e-class results are over-written as soon as you run another regression - so we need to save them somewhere if we want 
-to be able to access them later.
-
-<br>
-
 ## Storing Regression Results with `eststo`
 
 `eststo` is a Stata command that allows you to save the results of a regression.  Immediately after you run 
 any regression, your results are saved in a collection of local macros and matrices (you can see what is saved 
-by typing `return list` and `ereturn list` immediately after running your regreession).  These locals are 
+by typing `ereturn list` immediately after running your regreession).  These locals are 
 over-written as soon as you run another regression - so we need to save them somewhere.  This is what `eststo` does.
 
 `eststo` is very easy to use.  You can simply type `eststo` after running any regression.  Alternatively, you can preceed 
@@ -55,7 +21,7 @@ eststo:  c_act coartemprice
 ```
 By default, `eststo` saves the results from your first regression as `est1`, the results from your second regression 
 as `est2`, est.  But you can provide alternative names if you prefer:  just type `eststo` followed by your preferred name 
-for a particular specification (either after running the regression or before the colon in a single line of code).
+for a particular specification (either after running the regression or before the colon in a single line of code).  
 
 To see which regression results are currently stored in memory, type `eststo dir`.  The erase them and start fresh, 
 type `eststo clear`.  It is worth taking a look at the help file for `eststo` to familiarize yourself with its syntax before proceeding.
