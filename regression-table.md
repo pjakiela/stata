@@ -14,8 +14,8 @@ any regression, your results are saved in a collection of local macros and matri
 by typing `ereturn list` immediately after running your regression).  These locals are 
 over-written as soon as you run another regression - so we need to save them somewhere.  This is what `eststo` does.
 
-`eststo` is very easy to use.  You can simply type `eststo` after running any regression.  Alternatively, you can preceed 
-each regression command with `eststo:`, as you can see in this example:
+`eststo` is very easy to use.  You can simply type `eststo` after running any regression.  Alternatively, you can precede 
+each regression command with `eststo:`, as you see in this example:
 ```
 eststo:  c_act coartemprice
 ```
@@ -41,30 +41,30 @@ in Stata's output window:
 
 ![esttab results](esttab1.png)
 
-If you want to export this table to a word document, you can instead used the command 
+If you want to export this table to a word document, you can use the command 
 ```
 esttab using myregtable.rtf, replace
 ```
-which will save a rich text format file in your working directory, which you can then open using word.
+which will save a rich text format (rtf) file in your working directory, which you can then open using word.
 
 <br>
 
 ## Publication-Ready Tables
 
-We can clean our table up considerably by labeling our variables using the `label var` command to label 
-the $X$ variables that will appear in our table (note:  you must do this **before** you run your 
-regressions).  When variable names appear in otherwise finished tables, readers often have a hard time 
-knowing what the variables are:  names like `b_dist_km` or `txpostxfem` may not be immediately 
-self-eplanatory.  And they do not look very professional.  If your variables are labeled, `esttab` will 
-automatically use the labels rather than the variable names when making tables (though you can override 
-this by invoking the `nolabel` option).  
+You can clean up your table by labeling your variables using the `label var` command (note:  you must 
+do this **before** you run your regressions).  When variable names appear in otherwise finished tables, 
+readers often have a hard time knowing what the variables are:  names like `b_dist_km` 
+or `txpostxfem` may not be immediately self-eplanatory.  And they do not look very professional.  If 
+your variables are labeled, `esttab` will automatically use the labels rather than the variable names 
+when making tables (though you can override this by invoking the `nolabel` option).  
 
-Labels should be short, so that they do not wrap over multiple lines in your table.  They should also be 
-self-expanatory. You can include additional information in the table notes when necessary.  If you have 
-categorical variables that can be replaced with easier-to-interpret dummy variables, this might be a good 
+Variable labels should be short, so that they do not wrap over multiple lines in your table.  They should also be 
+self-expanatory. You can include additional information in the table notes when necessary.  
+
+If you have categorical variables that can be replaced with easier-to-interpret dummy variables, this might be a good 
 opportunity to transform them.  So, for example, you can include a rural dummy labeled "Rural" instead of 
 a `region` variable labeled "Region of residence:  urban = 1, rural = 2".  This will make it easier for 
-readers to immeidately interpret the regression coefficient.
+readers to immediately interpret your regression coefficients.
 
 Having relabeled the data, you can use `esttab` to generate a new version of your regression table.  By playing 
 around with `esttab`'s `varwidth()` and `modelwidth()` options, you can make sure that your columns are wide enough 
