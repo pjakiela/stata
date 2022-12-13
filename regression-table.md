@@ -129,10 +129,10 @@ esttab, label drop(Baseline Controls = b_*) replace
 ```
 produces the table below.
 
-![esttab-indicate-example.png](indicate-example)
+![indicate-example](esttab-indicate-example.png)
 
 You can also use the 
-`addnotes()` option to add any relevant information in the table notes.
+`note()` option to add any relevant information in the table notes.
 
 
 
