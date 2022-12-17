@@ -11,7 +11,7 @@ downloads data from the paper
 
 `eststo` is a Stata command that allows you to save the results of a regression.  Immediately after you run 
 any regression, your results are saved in a collection of local macros and matrices (you can see what is saved 
-by typing `ereturn` `list` immediately after running your regression).  These locals are 
+by typing `ereturn list` immediately after running your regression).  These locals are 
 over-written as soon as you run another regression - so we need to save them somewhere.  That is what `eststo` does.
 
 `eststo` is very easy to use.  You can simply type `eststo` after running any regression.  Alternatively, you can precede 
@@ -23,8 +23,8 @@ By default, `eststo` saves the results from your first regression as `est1`, the
 as `est2`, etc.  But you can provide alternative names if you prefer:  just type `eststo` followed by your preferred name 
 for a particular specification (either after running the regression or before the colon in a single line of code).  
 
-To see which regression results are currently stored in memory, type `eststo` `dir`.  The erase them and start fresh, 
-type `eststo` `clear`.  It is worth taking a look at the help file for `eststo` to familiarize yourself with its syntax before proceeding.
+To see which regression results are currently stored in memory, type `eststo dir`.  The erase them and start fresh, 
+type `eststo clear`.  It is worth taking a look at the help file for `eststo` to familiarize yourself with its syntax before proceeding.
 
 <br>
 
