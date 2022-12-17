@@ -89,7 +89,7 @@ rather than a one shilling price increase.)
 
 <br>
 
-## Additional Options in `esttab`
+## Additional `esttab` Options
 
 Economists typically report standard errors rather than t-statistics in parentheses.  You can 
 achieve this by invoking `esttab`'s `se` option.  If you want to specify how many digits 
@@ -131,12 +131,10 @@ produces the table below.
 
 ![indicate-example](esttab-indicate-example.png)
 
-You can also use the 
-`note()` option to add any relevant information in the table notes.
-
-
-
-r keeping only the coefficients on price using the `keep` option.  
+You can also use the `note()` option to add any relevant information in the table notes.  You will 
+typically want to indicate what specification you are using (i.e. OLS or logit), what level you are 
+clustering you standard errors at (or, if you are not clustering, that they are robust), and 
+which controls are included in which specifications, if that is not obvious from the body of your table.  
 
 <br>
 
