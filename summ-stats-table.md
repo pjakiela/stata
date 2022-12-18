@@ -4,9 +4,8 @@ Before you begin, set up a do file that
 downloads data from the paper 
 [Price Subsidies, Diagnostic Tests, and Targeting of Malaria Treatment: Evidence from a Randomized Controlled Trial](https://www.aeaweb.org/articles?id=10.1257/aer.20130267) by following the instructions [here](https://pjakiela.github.io/stata/making-tables.html). 
 
-The data set contains seven baseline variables, each of which begins with the prefix `b_`.  These variables 
-contain information about the characteristics of households in the sample measured prior to the start of the 
-randomized trial.  This page explains how to make a table that summarizes the characteristics of these variables (means, 
+The data set contains seven baseline variables, each of which begins with the prefix `b_`.  This page explains 
+how to make a table that summarizes the characteristics of these variables (means, 
 standard deviations, etc.).
 
 <br>
@@ -18,6 +17,20 @@ The command
 summarize b_*
 ```
 will produce summary statistics on all the variables beginning with `b_`.  
+
+You can use the Stata command 
+`estpost` to save the results of your summarize command as matrices.  Specifically, the command 
+```
+estpost summarize b_*
+```
+will generate a vector `e(mean)' that contains the means of all of the variables beginning with `b_* `.  You can 
+view this vector with the command
+```
+matrix list e(mean)
+```
+The `estpost` command will also save matrices `e(sd)`, `e(Var)`, `e(min)`, `e(max)`, and `e(count)` which are defined 
+analogously.  
+
 
 <br>
 
