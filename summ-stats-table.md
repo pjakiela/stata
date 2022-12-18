@@ -1,9 +1,10 @@
 # A Summary Statistics Table
 
 Before you begin, set up a do file that 
-downloads your data by following the instructions [here](https://pjakiela.github.io/stata/making-tables.html).  
+downloads data from the paper 
+[Price Subsidies, Diagnostic Tests, and Targeting of Malaria Treatment: Evidence from a Randomized Controlled Trial](https://www.aeaweb.org/articles?id=10.1257/aer.20130267) by following the instructions [here](https://pjakiela.github.io/stata/making-tables.html). 
 
-The data set contains 7 baseline variables, each of which begins with the prefix `b_`.  Use the 
+The data set contains seven baseline variables, each of which begins with the prefix `b_`.  Use the 
 command
 ```
 describe b_*
