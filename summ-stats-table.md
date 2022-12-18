@@ -4,7 +4,7 @@ Before you begin, set up a do file that
 downloads data from the paper 
 [Price Subsidies, Diagnostic Tests, and Targeting of Malaria Treatment: Evidence from a Randomized Controlled Trial](https://www.aeaweb.org/articles?id=10.1257/aer.20130267) by following the instructions [here](https://pjakiela.github.io/stata/making-tables.html). 
 
-The data set contains seven baseline variables, each of which begins with the prefix `b_`.  This page explains 
+The data set contains seven baseline variables, each of which begins with the prefix `b_*`.  This page explains 
 how to make a table that summarizes the characteristics of these variables (means, 
 standard deviations, etc.).
 
@@ -16,20 +16,29 @@ The command
 ```
 summarize b_*
 ```
-will produce summary statistics on all the variables beginning with `b_`.  
+will produce summary statistics on all the variables beginning with `b_`.   Immediately after you run 
+the summarize command, your results are saved in a collection of local macros and matrices.  You can see 
+what is saved by typing 
+```
+return list
+```
+immediately after your `summarize` command (or any other command that calculates statistics from data). These locals 
+are only stored temporarily; they are over-written as soon as you use another command.  So, you need to save your results somewhere.
 
 You can use the Stata command 
-`estpost` to save the results of your summarize command as matrices.  Specifically, the command 
+`estpost` before `summarize` to save your results as matrices.  Importantly, this allows you to save 
+the summary statistics for multiple variables in a single step.  Specifically, the command 
 ```
 estpost summarize b_*
 ```
-will generate a vector `e(mean)' that contains the means of all of the variables beginning with `b_* `.  You can 
-view this vector with the command
+will generate a matrices that contain the means, standard deviations, minima, and maxima for all 
+the variables beginning with `b_*`.  So, for example, `e(mean)' contains the means of all of the variables 
+beginning with `b_* `, which you can 
+view using the command
 ```
 matrix list e(mean)
 ```
-The `estpost` command will also save matrices `e(sd)`, `e(Var)`, `e(min)`, `e(max)`, and `e(count)` which are defined 
-analogously.  
+The `estpost` command will also save matrices `e(sd)`, `e(Var)`, `e(min)`, `e(max)`, and `e(count)`.
 
 
 <br>
