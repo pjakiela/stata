@@ -10,7 +10,7 @@ standard deviations, etc.).
 
 <br>
 
-## Storing Summary Statistics
+## Storing Summary Statistics Using `estpost`
 
 The command 
 ```
@@ -40,10 +40,27 @@ matrix list e(mean)
 ```
 The `estpost` command will also save matrices `e(sd)`, `e(Var)`, `e(min)`, `e(max)`, and `e(count)`.
 
+<br>
+
+## Making a Table Using `esttab`
+
+Now that you've stored your summary statistics using `estpost`, you can make a table using Stata's 
+`esttab` command.  Yes, the same `esttab` command that [you use to make a table of regression 
+results](https://pjakiela.github.io/stata/regression-table.html).  Using `esttab` to make a 
+summary stats table is a bit of a hack:  Stata is looking for regression results saved as 
+e-class matrices, but we've used the `estpost` command to save our summary statistics in that 
+format.  This allows us to use `esttab` to make a polished table that can be exported to 
+word, excel, or latex.  
+
+You can use the command 
+```
+esttab, cells("mean sd min max count")
+```
+to create a simple table of summary statistics in Stata's output window.  
 
 <br>
 
-## Exporting a Table to Excel
+## Exporting Your Table
 
 Now that you have your results stored in a Stata matrix, you can export it to Excel 
 using the `putexcel` command (in fact, `putexcel` is a useful command for exporting matrices 
