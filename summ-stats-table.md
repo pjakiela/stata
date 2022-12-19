@@ -10,7 +10,7 @@ standard deviations, etc.).
 
 <br>
 
-## Storing Summary Statistics Using `estpost`
+## Storing Summary Statistics with `estpost`
 
 The command 
 ```
