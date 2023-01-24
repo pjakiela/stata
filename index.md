@@ -66,7 +66,7 @@ Stata syntax used in this module: `return list`, `ereturn list`, `r(N)`, `r(mean
 
 17) [Keyboard Shortcuts](https://pjakiela.github.io/stata/keyboardshortcuts.html)
 
-Shortcuts in this module: Ctrl-R, Ctrl-B, Command-Shift-D (Mac); or Page up, Page down, Ctrl-D (Windows); plus indentation.
+Shortcuts in this module: `Ctrl-R`, `Ctrl-B`, `Command-Shift-D` (Mac); or `Page up`, `Page down`, `Ctrl-D` (Windows); plus indentation.
 
     
     
