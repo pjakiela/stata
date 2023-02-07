@@ -68,6 +68,14 @@ Stata syntax used in this module: `return list`, `ereturn list`, `r(N)`, `r(mean
 
 Shortcuts in this module: `Ctrl-R`, `Ctrl-B`, `Command-Shift-D` (Mac); or `Page up`, `Page down`, `Ctrl-D` (Windows); plus indentation.
 
+18) [Logical operators](https://pjakiela.github.io/stata/logical-and-or.html)
+
+Stata syntax used in this module: `&`, `|`
+
+19) [Subscripting and <i>in</i>](https://pjakiela.github.io/stata/logical-and-or.html)
+
+Stata syntax used in this module: `[]`, `in`
+
     
     
 Collaborators: Tristan Wille, Lily Levin, Pamela Jakiela, Owen Ozier
