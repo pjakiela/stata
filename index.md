@@ -72,7 +72,7 @@ Shortcuts in this module: `Ctrl-R`, `Ctrl-B`, `Command-Shift-D` (Mac); or `Page 
 
 Stata syntax used in this module: `&`, `|`
 
-19) [Subscripting and <i>in</i>](https://pjakiela.github.io/stata/logical-and-or.html)
+19) [Subscripting and <i>in</i>](https://pjakiela.github.io/stata/subscripting-and-in.html)
 
 Stata syntax used in this module: `[]`, `in`
 
