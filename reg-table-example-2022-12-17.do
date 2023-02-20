@@ -71,7 +71,6 @@ eststo:  reg c_act coartemprice b_*
 esttab, label indicate(Baseline Controls = b_*) varwidth(28) modelwidth(16) replace
 
 
-
 // EXPORT TO EXCCEL
 
 esttab using myregtable.csv, keep(coartemprice) mtitles("No Controls" "W/ Controls") nonumbers label nogaps varwidth(28) modelwidth(16) se replace
@@ -79,6 +78,6 @@ esttab using myregtable.csv, keep(coartemprice) mtitles("No Controls" "W/ Contro
 
 // EXPORT TO LATEX
 
-esttab using reg-table.tex, nolabel replace ///
-   title(Regression table\label{tab1})
+esttab using reg-table.tex, label b(2) se(2) nostar replace ///
+   title(Regression Table\label{tab1})
    
