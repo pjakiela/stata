@@ -125,7 +125,7 @@ row at the bottom of the table indicating which specifications include the dropp
 eststo clear
 eststo:  reg c_act coartemprice
 eststo:  reg c_act coartemprice b_*
-esttab, label drop(Baseline Controls = b_*) replace
+esttab, label indicate(Baseline Controls = b_*) replace
 ```
 produces the table below.
 
