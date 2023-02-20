@@ -170,4 +170,4 @@ with the LaTeX code:
 ## A do File
 
 A do file containing the code used in these examples is available 
-[here](reg-table-example-2022-12017.do).
+[here](reg-table-example-2022-12-17.do).
