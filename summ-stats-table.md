@@ -134,4 +134,10 @@ The code generates the output below:
 
 ![esttab-balance1.png](esttab-balance1.png)
 
+<br>
 
+## A do File
+
+A do file containing the code used in these examples is available [here](summ-stats-table-examples.do).
+
+ ---
