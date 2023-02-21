@@ -41,7 +41,9 @@ view using the command
 ```
 matrix list e(mean)
 ```
-The `estpost` command will also save matrices `e(sd)`, `e(Var)`, `e(min)`, `e(max)`, and `e(count)`.
+The `estpost` command will also save matrices `e(sd)`, `e(Var)`, `e(min)`, `e(max)`, and `e(count)`.  You can also 
+use the `estpost` command with `summarize` and `ttest` to save different collections of summary statistics.  More information 
+is available in Stata's `estpost` help file.
 
 <br>
 
@@ -82,12 +84,13 @@ cells("mean(fmt(%9.2f)) sd min max count(fmt(%9.0g))")
 This will limit the number of decimal places to two for the first four columns 
 while reporting whole numbers in the final column.  
 
-To export your finished table to word, you can add `using` followed by the name of an rtf (rich text format) 
+To export your finished table to word, you can add `using` followed by the name of a rtf (rich text format) 
 file immediately after `esttab`.  So, for instance, the code
 ```
 esttab using summ-stats-example1.rtf, replace ///
-cells("mean(fmt(%9.2f)) sd min(fmt(%9.2g)) max(fmt(%9.2g)) count(fmt(%9.0g))") ///
-label noobs nonum nomtitle collabels("Mean" "S.D." "Min." "Max." "N") ///
+cells("mean(fmt(2)) sd min max count(fmt(%9.0g))") ///
+label noobs nonum nomtitle ///
+collabels("Mean" "S.D." "Min." "Max." "N") ///
 title(Summary Statistics Table)
 ```
 would save a file `summ-stats-example1.rtf` in your working directory which could then be opened with word.  `esttab` 
@@ -103,12 +106,14 @@ or to compare outcomes for men and women.  We can do this by combining the `ests
 
 As you may recall, Stata's `eststo` command saves regression results.  For example, we can use the command 
 ```
-eststo reg1:  reg y x1 x2, robust
+eststo reg1:  reg y x1 x2
 ```
 to save the results of a regression of `y` on `x1` and `x2`.  As we discussed above, the `estpost` command makes the summary statistics 
-produced by commands like `summarize`, `ttest`, and `tabulate` look like regression results to Stata.  
+produced by commands like `summarize`, `ttest`, and `tabulate` look like regression results to Stata.  When you combine `eststo` and 
+`estpost`, you can save named collections of summary statistics.  You can then combine multiple collections of summary statistics 
+in a single table using `esttab`, as you would combine the results of different regression specifications.
 
-The command below generates a balance check table that reports means and standard deviations of baseline covariates for the 
+The sample code below generates a balance check table that reports means and standard deviations of baseline covariates for the 
 randomly assigned treatment groups (in Cohen, Dupas, and Schaner's RCT), and then tests the null hypothesis that the means of these variables 
 are similar in the treatment and comparison groups.
 
@@ -118,12 +123,15 @@ eststo treatment:  estpost summarize b_* if act_any==1
 eststo control:  estpost summarize b_* if act_any==0
 eststo diff:  estpost ttest b_*, by(act_any)
 
-esttab treatment control diff, replace label varwidth(28) ///
+esttab treatment control diff using balance-table.rtf, ///
+	replace label varwidth(28) ///
 	cell(mean(pattern(1 1 0) fmt(2)) & b(pattern(0 0 1) star fmt(3)) ///
-	sd(pattern(1 1 0) par([ ]) fmt(2)) & se(pattern(0 0 1) par fmt(3))) collabels(none) ///
-	mtitles("Treatment" "Control" "Difference") nonum ///
+	sd(pattern(1 1 0) par([ ]) fmt(2)) & se(pattern(0 0 1) par fmt(3))) ///
+	collabels(none) mtitles("Treatment" "Control" "Difference") nonum ///
 	note(Standard deviations in brackets; standard errors in parentheses.) 
 ```
+The code generates the output below:
 
+![esttab-balance1.png](esttab-balance1.png)
 
 
