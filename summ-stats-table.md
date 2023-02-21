@@ -63,6 +63,9 @@ to create a simple table of summary statistics (like the example below) in Stata
 
 ![esttab-summstats1.png](esttab-summstats1.png)
 
+This table already lookes pretty good, but we can make it look more professional by using `esttab`'s 
+
+
 <br>
 
 
