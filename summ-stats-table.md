@@ -140,4 +140,6 @@ The code generates the output below:
 
 A do file containing the code used in these examples is available [here](summ-stats-table-examples.do).
 
+<br>
+
  ---
