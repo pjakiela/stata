@@ -63,7 +63,25 @@ to create a simple table of summary statistics (like the example below) in Stata
 
 ![esttab-summstats1.png](esttab-summstats1.png)
 
-This table already lookes pretty good, but we can make it look more professional by using `esttab`'s 
+This table already lookes pretty good, but we can make it look more professional by using 
+some of `esttab`'s options.  The `noobs` options will remove the bottom panel listing the sample size, 
+since it is redundant.  The `nonum` option will remove the number `(1)` from the table header.  Adding 
+```
+nomtitle collabels("Mean" "S.D." "Min." "Max." "N")
+``` 
+will replace the default column headings (reflecting the names of the e-class matrices included in the table) 
+with column headings of our choice.  Finally, we can modify the content of the `cells()` option 
+to format each of the columns as we wish by replacing
+```
+cells("mean sd min max count")
+```
+with 
+```
+cells("mean(fmt(%9.2f)) sd min max count(fmt(%9.0g))")
+```
+This will limit the number of decimal places to two for the first four columns 
+while reporting whole numbers in the final column.  
+
 
 
 <br>
