@@ -82,9 +82,48 @@ cells("mean(fmt(%9.2f)) sd min max count(fmt(%9.0g))")
 This will limit the number of decimal places to two for the first four columns 
 while reporting whole numbers in the final column.  
 
-
+To export your finished table to word, you can add `using` followed by the name of an rtf (rich text format) 
+file immediately after `esttab`.  So, for instance, the code
+```
+esttab using summ-stats-example1.rtf, replace ///
+cells("mean(fmt(%9.2f)) sd min(fmt(%9.2g)) max(fmt(%9.2g)) count(fmt(%9.0g))") ///
+label noobs nonum nomtitle collabels("Mean" "S.D." "Min." "Max." "N") ///
+title(Summary Statistics Table)
+```
+would save a file `summ-stats-example1.rtf` in your working directory which could then be opened with word.  `esttab` 
+can also export tables in latex, html, or markdown format, or as csv files that can be opened in excel.  
 
 <br>
+
+## A Balance Check Table
+
+It is often helpful to produce a table that compares the means of variables across two or more groups:  for example, 
+to check whether randomly assigning treatment has produced groups that look similar in terms of pre-treatment covariates, 
+or to compare outcomes for men and women.  We can do this by combining the `eststo`, `estpost`, and `esttab` commands.  
+
+As you may recall, Stata's `eststo` command saves regression results.  For example, we can use the command 
+```
+eststo reg1:  reg y x1 x2, robust
+```
+to save the results of a regression of `y` on `x1` and `x2`.  As we discussed above, the `estpost` command makes the summary statistics 
+produced by commands like `summarize`, `ttest`, and `tabulate` look like regression results to Stata.  
+
+The command below generates a balance check table that reports means and standard deviations of baseline covariates for the 
+randomly assigned treatment groups (in Cohen, Dupas, and Schaner's RCT), and then tests the null hypothesis that the means of these variables 
+are similar in the treatment and comparison groups.
+
+```
+eststo clear
+eststo treatment:  estpost summarize b_* if act_any==1
+eststo control:  estpost summarize b_* if act_any==0
+eststo diff:  estpost ttest b_*, by(act_any)
+
+esttab treatment control diff, replace label varwidth(28) ///
+	cell(mean(pattern(1 1 0) fmt(2)) & b(pattern(0 0 1) star fmt(3)) ///
+	sd(pattern(1 1 0) par([ ]) fmt(2)) & se(pattern(0 0 1) par fmt(3))) collabels(none) ///
+	mtitles("Treatment" "Control" "Difference") nonum ///
+	note(Standard deviations in brackets; standard errors in parentheses.) 
+```
 
 
 
