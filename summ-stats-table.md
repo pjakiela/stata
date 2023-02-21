@@ -59,7 +59,9 @@ You can use the command
 ```
 esttab, cells("mean sd min max count")
 ```
-to create a simple table of summary statistics in Stata's output window.  
+to create a simple table of summary statistics (like the example below) in Stata's output window.  
+
+![esttab-summstats1.png](esttab-summstats1.png)
 
 <br>
 
