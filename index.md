@@ -18,6 +18,10 @@ Stata syntax used in this module: `browse`, `sort`, `tostring`
  
 Stata syntax used in this module: `generate`, `replace`, `set obs`, `missing()`, `_n`
 
+4.5) [Help Command Intro](https://pjakiela.github.io/stata/helpintro.html)
+
+Stata syntax used in this module: `help`
+
 5) [Local and Global Macros](https://pjakiela.github.io/stata/macroMod.html)
 
 Stata syntax used in this module: `local`, `global`, `display`
