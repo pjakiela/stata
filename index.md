@@ -32,6 +32,10 @@ Stata syntax used in this module: `clear all`, `set obs`, `set seed`
 
 7) [Abbreviations in Stata](https://pjakiela.github.io/stata/abbreviating.html)
 
+7.5) [Early graphing](https://pjakiela.github.io/stata/earlygraphing.html)
+
+Stata syntax used in this module: `twoway scatter`, `histogram`
+
 8) [Log Files](https://pjakiela.github.io/stata/logfile.html)
 
 Stata syntax used in this module: `log`
