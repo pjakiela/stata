@@ -86,4 +86,4 @@ Stata syntax used in this module: `[]`, `in`
 
     
     
-Collaborators: Tristan Wille, Lily Levin, Pamela Jakiela, Owen Ozier
+Collaborators: Tristan Wille, Lily Levin, Agustin Aliaga, Isabel Beckrich, Pamela Jakiela, Owen Ozier
